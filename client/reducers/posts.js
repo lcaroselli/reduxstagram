@@ -5,7 +5,9 @@
   //will take what happened (action) and the store (current state)
   //let me see this and return an update copy of our store
 
-export function posts(state = [], action) {
+function posts(state = [], action) {
   console.log(state, action)
   return state;
 }
+
+export default posts;

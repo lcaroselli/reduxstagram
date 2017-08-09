@@ -5,4 +5,6 @@ import comments from './comments';
 
 //three things that live in state - posts, comments, and changes
 
-export const rootReducer = combineReducers({ posts, comments, router: routerReducer })
+const rootReducer = combineReducers({ posts, comments, routing: routerReducer });
+
+export default rootReducer;

@@ -7,7 +7,7 @@ import posts from './data/posts';
 
 //create an object for the default data
 const defaultState = {
-  posts, //ES6 Syntax -- same as posts: posts, comments: comments
+  posts,
   comments
 }
 
