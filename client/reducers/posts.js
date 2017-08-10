@@ -6,8 +6,17 @@
   //let me see this and return an update copy of our store
 
 function posts(state = [], action) {
-  console.log(state, action)
-  return state;
+  switch(action.type) {
+    case 'INCREMENT_LIKES':
+      const i = action.index;
+      return [
+        ...state.slice(0, i), //before the one being updated
+        {...state[i], likes: state[i].likes + 1},
+        ...state.slice(i + 1), //after the one being updated
+      ]
+    default:
+      return state;
+  }
 }
 
 export default posts;
